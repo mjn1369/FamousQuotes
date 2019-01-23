@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <ProgressBar android:layout_width="48dp" android:layout_height="48dp"
+                 android:id="@+id/pbLoading" android:layout_marginBottom="@dimen/default_margin_double"
+                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:paddingLeft="@dimen/default_margin_double"
+              android:paddingRight="@dimen/default_margin_double"
+              app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/tvQuoteText"
+              android:gravity="center"
+              android:fontFamily="@font/firasans_regular" android:textSize="@dimen/xlarge_text_size"
+              android:textColor="@color/black"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvQuoteAuthor" android:layout_marginTop="@dimen/default_margin_double"
+            app:layout_constraintTop_toBottomOf="@+id/tvQuoteText" app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="@dimen/medium_text_size"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+            android:text="@string/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnNextQuote"
+            android:textColor="@color/black"
+            android:layout_marginBottom="@dimen/default_margin_double"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

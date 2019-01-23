@@ -1,0 +1,26 @@
+apply plugin: 'kotlin'
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':data')
+
+    def remoteDependencies = rootProject.ext.remoteDependencies
+
+    implementation remoteDependencies.javaxAnnotation
+    implementation remoteDependencies.javaxInject
+    implementation remoteDependencies.kotlin
+    implementation remoteDependencies.rxKotlin
+
+    api remoteDependencies.okhttp
+    api remoteDependencies.okhttpLoggingInterceptor
+
+    implementation remoteDependencies.retrofit
+    implementation remoteDependencies.retrofitGsonConverter
+
+    api remoteDependencies.gson
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
